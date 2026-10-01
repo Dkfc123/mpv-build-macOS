@@ -99,10 +99,9 @@ fetch_libjxl() {
 }
 
 fetch_libplacebo() {
-  local url="https://code.videolan.org/kasper93/libplacebo.git"
-  local branch="fix-tone-mapping"
+  local url="https://code.videolan.org/videolan/libplacebo.git"
   rm -rf src/libplacebo
-  git -C src clone --depth 1 --branch "${branch}" --recursive "${url}"
+  git -C src clone --depth 1 --recurse-submodules=3rdparty/{fast_float,jinja,markupsafe} "${url}"
 }
 
 fetch_libpng() {
