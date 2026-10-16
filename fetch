@@ -150,7 +150,7 @@ fetch_moltenvk() {
 
 fetch_mpv() {
   local url="https://github.com/Dkfc123/mpv.git"
-  local branch="build-omniphony-fel"
+  local branch="omniphony-master"
   rm -rf src/mpv
   git -C src clone --depth 1 --branch "${branch}" "${url}"
 }
